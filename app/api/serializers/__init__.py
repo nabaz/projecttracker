@@ -1,0 +1,5 @@
+from api.serializers.customer_serializers import CustomerSerializers
+from api.serializers.project_serializers import ProjectSerializers
+from api.serializers.task_serializers import TaskSerializers
+from api.serializers.user_serializers import UserSerializers
+from api.serializers.time_entry_serializers import TimeEntrySerializers
