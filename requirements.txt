@@ -1,0 +1,12 @@
+Django==1.11.10
+django-dotenv==1.4.2
+django-environ==0.4.4
+django-filter==1.1.0
+django-rest-framework-roles==0.5
+djangorestframework==3.7.7
+djangorestframework-jwt==1.11.0
+Markdown==2.6.11
+psycopg2==2.7.3.2
+PyJWT==1.5.3
+pytz==2017.3
+six==1.11.0

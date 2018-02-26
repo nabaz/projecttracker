@@ -28,10 +28,6 @@ SECRET_KEY = 'g$uqd4a&3n4ls3lef+89u9c%b52epzhs-^=r&(ba15n#)o_tb#'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
-
-ALLOWED_HOSTS = ['localhost', '127.0.0.1']
-
-
 # Application definition
 
 INSTALLED_APPS = [
@@ -55,7 +51,6 @@ MIDDLEWARE = [
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
-
 ROOT_URLCONF = 'app.urls'
 
 TEMPLATES = [
@@ -116,12 +111,12 @@ REST_FRAMEWORK = {
         'rest_framework.permissions.IsAuthenticated',
     ],
     'DEFAULT_AUTHENTICATION_CLASSES': (
-        'rest_framework_jwt.authentication.JSONWebTokenAuthentication',
+        'rest_framework_simplejwt.authentication.JWTAuthentication',
         'rest_framework.authentication.SessionAuthentication',
-        'rest_framework.authentication.BasicAuthentication',
+
+
     )
 }
-
 # Internationalization
 # https://docs.djangoproject.com/en/1.10/topics/i18n/
 VIEWSET_METHOD_REGISTRY = (
@@ -147,7 +142,6 @@ USE_I18N = True
 USE_L10N = True
 
 USE_TZ = True
-
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/1.10/howto/static-files/

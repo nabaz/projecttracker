@@ -1,5 +1,4 @@
 from rest_framework import generics
-from rest_framework.permissions import IsAuthenticated
 from rest_framework import viewsets
 
 from api.models import Project
@@ -10,9 +9,7 @@ class RoleError(Exception):
     """Base class for exceptions in this module."""
     pass
 
-class ApiViewSet(RoleViewSetMixin, viewsets.ModelViewSet, Exception):
-    permission_classes = (IsAuthenticated,)
-
+class ApiViewSet(RoleViewSetMixin, viewsets.ModelViewSet):
     def get_queryset_for_admin(self):
         return self.model.objects.all()
 
